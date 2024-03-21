@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: naughty-cardinal-java-quarkus
+  janus-idp.io/tekton: naughty-cardinal-java-quarkus
+  backstage.io/kubernetes-id: naughty-cardinal-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: naughty-cardinal-java-quarkus
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
